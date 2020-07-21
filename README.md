@@ -4,10 +4,6 @@ Save depth data and generate GeoJSON contours
 Right now this only has functionality to test run testing with a local sample data set. 
 'npm run test' to generate geoJson file from test data. 
 
-To minimize load during the run: 
-
-Plot Object: 
-
 1. Boat is saving plot[lat][long].depth as the kalman filter over the array of plot[lat][long].all
   
   a. At each delta if the plugin has recent depth and position data it will first push the most recent sounding to plot[lat][long].all and then run a kalman filter over the .all array and save to the .depth value.
@@ -25,3 +21,9 @@ Plot Object:
 2. The plot object is then converted to a rectangular data set to be analyzed by the d3-contour package.
 
 3. The GeoJSON Multipolygon object is saved as './contours/'<UUID>'.json
+
+4. Using the online http://geojson.tools for viewing the contour .json file in testing.  
+
+5. My current live data doesn't have enought density of data to provide a very good representation, so the test script adds random data from 0-10 for depth. 
+
+ 
