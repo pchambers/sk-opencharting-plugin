@@ -1,3 +1,4 @@
 .git
 .git/*
 contour.json
+node_modules/*
