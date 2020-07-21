@@ -1,0 +1,14 @@
+{
+  "name": "sk-opencharting-plugin",
+  "version": "1.0.0",
+  "description": "Save depth data, generate GeoJSON Contour Plots",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "\"signalk-node-server-plugin\""
+  ],
+  "author": "Peter Chambers",
+  "license": "ISC"
+}
