@@ -16,7 +16,7 @@ Plot Object:
   
   c. Each plot is titled by a UUID unique to each mission or trip. 
   
-  d. At the end of the trip the plot is saved locally to './plots/<UUID>.json'
+  d. At the end of the trip the plot is saved locally to './plots/'<UUID>'.json'
   
   e. The resolution is 0.00001' or approximately 1m x 1m at 0'x0'
   
@@ -24,4 +24,4 @@ Plot Object:
   
 2. The plot object is then converted to a rectangular data set to be analyzed by the d3-contour package.
 
-3. The GeoJSON Multipolygon object is saved as './contours/<UUID>.json
+3. The GeoJSON Multipolygon object is saved as './contours/'<UUID>'.json
