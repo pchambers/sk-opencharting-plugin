@@ -1,8 +1,8 @@
 const generateContour = require('./generateContour');
 const fs = require('fs');
 
-const uuid = 'eac717c9-4509-4547-8e32-ba6f99841ffa';
-
+//const uuid = 'eac717c9-4509-4547-8e32-ba6f99841ffa';
+const uuid = '736c1363-31bf-49c5-921b-5140bc480f4b';
 //thresholds as multiples of vessel draft (to be customized in plugin.schema)
 //will add as optional 3rd argument for renderContour()
 const thresholds = [0.6,1.2,1.8];
@@ -10,7 +10,7 @@ const thresholds = [0.6,1.2,1.8];
 let testPlot = JSON.parse(fs.readFileSync('./plots/'+uuid+'.json'));
 
 var contour = generateContour.formatPlot(testPlot);
-contour = fillDummyDepthData(contour);
+//contour = fillDummyDepthData(contour);
 contour = generateContour.renderContour(contour, uuid);
 fs.writeFileSync('contour.json',JSON.stringify(contour,null,3));
 

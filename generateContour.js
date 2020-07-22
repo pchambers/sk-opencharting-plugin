@@ -139,8 +139,8 @@ function convertCoords(coords, { limits, size }) {
       let i = 0;
       for (let p of ring) {
         newRing.push([
-           parseFloat((limits.long.min -(limits.long.max - limits.long.min) * (p[0] / size.width)).toFixed(5)),
-           parseFloat((limits.lat.max +(limits.lat.max - limits.lat.min) * (p[1] / size.height)).toFixed(5))
+           parseFloat((limits.long.max - (limits.long.max - limits.long.min) * (p[0] / size.width)).toFixed(5)),
+           parseFloat((limits.lat.max -(limits.lat.max - limits.lat.min) * (p[1] / size.height)).toFixed(5))
         ]);
         i++;
     }
